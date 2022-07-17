@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Завдання 1:");
         Random x_random = new Random();
         int[] array = new int[10];
-        for (int i=0; i<array.length; i++) {
+        for (int i=0; i < array.length; i++) {
             int r = x_random.nextInt(100);
               if (r%2 == 0) {
                   array[i] = r;
