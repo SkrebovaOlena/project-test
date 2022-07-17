@@ -97,13 +97,11 @@ public class Main {
             cm[i] = random_cm.nextInt(100);
         }
 
-
-
-        int max = 0;
+        boolean isDouble = false;
+        int max = Integer.MIN_VALUE;
         for (int a = 0; a < cm.length; a++) {
-            //int l = Math.max(Arrays.toString())
-
-            if (cm[a] > max && cm[a]%2 == 0) {
+            if (cm[a]%2 == 0 && cm[a]>max)  {
+                isDouble = true;
                 max = cm[a];
             }
             System.out.println(cm[a]);
