@@ -22,13 +22,11 @@ public class Main {
               }
         }
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 2:");
         for (int i=10; i>=0; i--) {
             System.out.println(i);
         }
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 3:");
         char[] y = new char[10];
         Random random = new Random();
@@ -38,14 +36,12 @@ public class Main {
          System.out.print(y[i]);
         }
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 4:");
         Random random_c = new Random();
         int[] c = new int[10];
         for (int i = 0; i < c.length; i++) {
             c[i] = random_c.nextInt(100);
         }
-
         int first = c[1];
         for (int a = 1; a < c.length; a++) {
            if (c[a] > first) {
@@ -55,14 +51,12 @@ public class Main {
         }
         System.out.println("Найбільше число масиву " + first);
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 5:");
         Random random_d = new Random();
         int[] cd = new int[10];
         for (int i = 0; i < c.length; i++) {
             cd[i] = random_d.nextInt(100);
         }
-
         int small = cd[0];
         for (int a = 1; a < cd.length; a++) {
           if (cd[a] < small) {
@@ -72,14 +66,12 @@ public class Main {
         }
         System.out.println("Найбільше число масиву " + small);
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 6:");
         Random random_qw = new Random();
         int[] qw = new int[10];
         for (int i = 0; i < qw.length; i++) {
             qw[i] = random_qw.nextInt(100);
         }
-
         int q = 0;
         for (int i: qw
              ) {
@@ -89,14 +81,12 @@ public class Main {
         double mid = (double) q / qw.length;
         System.out.println("Середнє значення масиву = " + mid);
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 7:");
         Random random_cm = new Random();
         int[] cm = new int[10];
         for (int i = 0; i < cm.length; i++) {
             cm[i] = random_cm.nextInt(100);
         }
-
         boolean isDouble = false;
         int max = Integer.MIN_VALUE;
         for (int a = 0; a < cm.length; a++) {
@@ -108,18 +98,15 @@ public class Main {
         }
         System.out.println("Найбільше парне значення в масиві: " + max);
 
-        ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 8:");
         Random random_sss = new Random();
         int[] sss = new int[10];
         for (int i = 0; i < sss.length; i++) {
             sss[i] = random_sss.nextInt(100);
         }
-
         for (int a = 0; a < sss.length; a++) {
             if (sss[a]%2 == 0) {
-                System.out.println("число " + sss[a]);
-                System.out.println("індекс " + a);
+                System.out.println("індекс " + a + " : число " + sss[a]);
             }
         }
     }
