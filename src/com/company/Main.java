@@ -1,6 +1,7 @@
 package com.company;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -26,6 +27,7 @@ public class Main {
         for (int i=10; i>=0; i--) {
             System.out.println(i);
         }
+
         ////////////////////////////////////////////////////////////////
         System.out.println("Завдання 3:");
         char[] y = new char[10];
@@ -95,12 +97,16 @@ public class Main {
             cm[i] = random_cm.nextInt(100);
         }
 
+
+
         int max = 0;
-        for (int a = 0; a < c.length; a++) {
-            if (c[a] > max && c[a]%2 == 0) {
-                max = c[a];
+        for (int a = 0; a < cm.length; a++) {
+            //int l = Math.max(Arrays.toString())
+
+            if (cm[a] > max && cm[a]%2 == 0) {
+                max = cm[a];
             }
-            System.out.println(c[a]);
+            System.out.println(cm[a]);
         }
         System.out.println("Найбільше парне значення в масиві: " + max);
 
