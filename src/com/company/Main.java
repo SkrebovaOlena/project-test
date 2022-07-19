@@ -42,14 +42,14 @@ public class Main {
         for (int i = 0; i < c.length; i++) {
             c[i] = random_c.nextInt(100);
         }
-        int first = c[1];
+        int max_value = c[1];
         for (int a = 1; a < c.length; a++) {
-           if (c[a] > first) {
-               first = c[a];
+           if (c[a] > max_value) {
+               max_value = c[a];
            }
             System.out.println(c[a]);
         }
-        System.out.println("Найбільше число масиву " + first);
+        System.out.println("Найбільше число масиву " + max_value);
 
         System.out.println("Завдання 5:");
         Random random_d = new Random();
@@ -57,14 +57,14 @@ public class Main {
         for (int i = 0; i < c.length; i++) {
             cd[i] = random_d.nextInt(100);
         }
-        int small = cd[0];
+        int min_value = cd[0];
         for (int a = 1; a < cd.length; a++) {
-          if (cd[a] < small) {
-                small = cd[a];
+          if (cd[a] < min_value) {
+              min_value = cd[a];
           }
             System.out.println(cd[a]);
         }
-        System.out.println("Найбільше число масиву " + small);
+        System.out.println("Найбільше число масиву " + min_value);
 
         System.out.println("Завдання 6:");
         Random random_qw = new Random();
@@ -87,11 +87,9 @@ public class Main {
         for (int i = 0; i < cm.length; i++) {
             cm[i] = random_cm.nextInt(100);
         }
-        boolean isDouble = false;
         int max = Integer.MIN_VALUE;
         for (int a = 0; a < cm.length; a++) {
             if (cm[a]%2 == 0 && cm[a]>max)  {
-                isDouble = true;
                 max = cm[a];
             }
             System.out.println(cm[a]);
@@ -105,7 +103,7 @@ public class Main {
             sss[i] = random_sss.nextInt(100);
         }
         for (int a = 0; a < sss.length; a++) {
-            if (sss[a]%2 == 0) {
+            if (a%2 == 0) {
                 System.out.println("індекс " + a + " : число " + sss[a]);
             }
         }
