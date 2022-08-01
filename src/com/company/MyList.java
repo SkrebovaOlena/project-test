@@ -25,9 +25,4 @@ public class MyList<T extends Number>  {
             }
         return maxValue;
     }
-
-    @Override
-    public String toString() {
-        return "Long way: Max value = " + getMaxValue() + ", Min value = " + getMinValue();
-    }
 }

@@ -21,6 +21,6 @@ public class Main {
         System.out.println("Min value (short way) = " + Collections.min(myList.arrayList));
 
         // long variant
-        System.out.println(myList.toString());
+        System.out.println("Long way: Max value = " + myList.getMaxValue() + ", Min value = " + myList.getMinValue());
     }
 }
