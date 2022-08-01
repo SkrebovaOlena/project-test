@@ -13,8 +13,7 @@ public class MyList<T extends Number>  {
     public Number getMinValue(){
         Integer minValue = (Integer) arrayList.get(0);
         for (int i = 0; i < arrayList.size(); i++) {
-            Integer value = (Integer)arrayList.get(i);
-            minValue = Math.min(value, minValue);
+            minValue = Math.min((Integer)arrayList.get(i), minValue);
         }
         return minValue;
     }
@@ -22,8 +21,7 @@ public class MyList<T extends Number>  {
     public Number getMaxValue(){
         Integer maxValue = (Integer) arrayList.get(0);
         for (int i = 0; i < arrayList.size(); i++) {
-            Integer value = (Integer)arrayList.get(i);
-            maxValue = Math.max(value, maxValue);
+            maxValue = Math.max((Integer)arrayList.get(i), maxValue);
             }
         return maxValue;
     }
