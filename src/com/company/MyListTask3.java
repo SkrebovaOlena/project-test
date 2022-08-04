@@ -1,6 +1,6 @@
 package com.company;
 
-public class MyListTask3 <T extends Comparable> {
+public class MyListTask3 <T extends Comparable<T>> {
 
     public T[] myListTask3;
 
@@ -12,7 +12,7 @@ public class MyListTask3 <T extends Comparable> {
         T maxValue = myListTask3[0];
         for (int i = 0; i < myListTask3.length; i++) {
             T value = myListTask3[i];
-            if (maxValue.compareTo(value) < 1) {
+            if (value.compareTo(maxValue) > 0) {
                 maxValue = value;
             }
         }
@@ -23,7 +23,7 @@ public class MyListTask3 <T extends Comparable> {
         T minValue = myListTask3[0];
         for (int i = 0; i < myListTask3.length; i++) {
             T value = myListTask3[i];
-            if (value.compareTo(minValue) < 1) {
+            if (value.compareTo(minValue) < 0) {
                 minValue = value;
             }
         }

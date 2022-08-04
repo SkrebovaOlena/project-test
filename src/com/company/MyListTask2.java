@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public class MyListTask2<T extends Comparable> {
+public class MyListTask2<T extends Comparable<T>> {
 
     public List<T> myListTask2 = new ArrayList<T>();
 
@@ -14,7 +14,7 @@ public class MyListTask2<T extends Comparable> {
         T maxValue = myListTask2.get(0);
         for (int i = 0; i < myListTask2.size(); i++) {
             T value = myListTask2.get(i);
-            if (maxValue.compareTo(value) < 1) {
+            if (value.compareTo(maxValue) > 0) {
                 maxValue = value;
             }
         }
@@ -25,7 +25,7 @@ public class MyListTask2<T extends Comparable> {
         T minValue = myListTask2.get(0);
         for (int i = 0; i < myListTask2.size(); i++) {
             T value = myListTask2.get(i);
-            if (value.compareTo(minValue) < 1) {
+            if (value.compareTo(minValue) < 0) {
                 minValue = value;
             }
         }
