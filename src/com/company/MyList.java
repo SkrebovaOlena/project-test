@@ -1,28 +1,33 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MyList<T extends Number>  {
+public class MyList<T extends Number> {
 
-    public ArrayList<T> arrayList = new ArrayList<T>();
+    public List<T> arrayList = new ArrayList<T>();
 
     public void add(T t) {
         arrayList.add(t);
     }
 
-    public Number getMinValue(){
-        Integer minValue = (Integer) arrayList.get(0);
+    public T getMinValue() {
+        T minValue = arrayList.get(0);
         for (int i = 0; i < arrayList.size(); i++) {
-            minValue = Math.min((Integer)arrayList.get(i), minValue);
+            T value = arrayList.get(i);
+            if (value.doubleValue() < minValue.doubleValue())
+                minValue = value;
         }
         return minValue;
     }
 
-    public Number getMaxValue(){
-        Integer maxValue = (Integer) arrayList.get(0);
+    public T getMaxValue() {
+        T maxValue = arrayList.get(0);
         for (int i = 0; i < arrayList.size(); i++) {
-            maxValue = Math.max((Integer)arrayList.get(i), maxValue);
-            }
+            T value = arrayList.get(i);
+            if (value.doubleValue() > maxValue.doubleValue())
+                maxValue = value;
+        }
         return maxValue;
     }
 }
